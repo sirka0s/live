@@ -2,6 +2,18 @@ provider "aws" {
     region = "us-east-1"
 }
 
+#Configuring backend for tfstate file
+terraform {
+  backend "s3" {
+      bucket = "kaos-terraform-state"
+      key = "stage/services/webservers-cluster/terraform.tfstate"
+      region = "us-east-1"
+
+      dynamodb_table = "kaos-terraform-state-lock"
+      encrypt = true
+  }
+}
+
 module "webserver_cluster" {
     source = "github.com/sirka0s/modules//services/webserver-cluster?ref=v0.0.2"
 
