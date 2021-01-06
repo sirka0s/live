@@ -15,6 +15,6 @@ terraform {
 }
 
 resource "aws_iam_user" "example" {
-  for_each = toset(var.user_name)
+  for_each = toset(var.user_name) #toset - changing list (user_name) to set
   name = each.value
 }
