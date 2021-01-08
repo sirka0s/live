@@ -44,7 +44,7 @@ data "aws_ami" "amazon" {
 resource "aws_instance" "ami_test" {
     ami = "ami-0be2609ba883822ec"
     instance_type = "t2.micro"
-    monitoring = true # CloudWatch Detailed Monitoring
+    monitoring = true # CloudWatch Detailed Monitoring (not free tier!)
     key_name = "key_pair_kaos_aws"
 
     tags = {
