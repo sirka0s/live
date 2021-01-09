@@ -19,7 +19,7 @@ output "roles" {
 #Loop within string
 output "stringy" {
   value = <<EOT
-  %{ for name in var.user_name ~}
+  %{ for name in var.user_name ~} # ~ is a strip marker - it removes all whitespaces
   ${name}
   %{ endfor ~}
   EOT
