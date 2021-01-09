@@ -25,5 +25,6 @@ module "webserver_cluster" {
     min_size = 2
     max_size = 3
     enable_autoscaling = false
+    enable_new_user_data = false
 }
 

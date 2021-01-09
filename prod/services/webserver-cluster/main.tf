@@ -27,6 +27,7 @@ module "webserver_cluster" {
     max_size = 10
 
     enable_autoscaling = true
+    enable_new_user_data = true
 
     custom_tagsy = {
       Owner = "kaos"

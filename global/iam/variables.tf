@@ -13,3 +13,8 @@ variable "heroes" {
     morph = "mentor"
   }
 }
+
+variable "give_neo_cloudwatch_full_access" {
+  description =  "If true, give Neo full access to Cloudwatch"
+  type = bool
+}
