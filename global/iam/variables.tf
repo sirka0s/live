@@ -3,3 +3,13 @@ variable "user_name" {
   type = list(string)
   default = ["neo", "clichy"]
 }
+
+variable "heroes" {
+  description = "map"
+  type = map(string)
+  default = {
+    neo = "hero"
+    trin = "yo mama"
+    morph = "mentor"
+  }
+}
