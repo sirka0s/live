@@ -15,7 +15,7 @@ terraform {
 }
 
 module "webserver_cluster" {
-    source = "github.com/sirka0s/modules//services/webserver-cluster?ref=v0.0.6"
+    source = "github.com/sirka0s/modules//services/webserver-cluster"
 
     cluster_name  = "webservers-stage"
     db_remote_state_bucket = "kaos-terraform-state"
